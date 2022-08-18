@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox prefHeight="400.0" prefWidth="640.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.youssefagagg.typing.TypeController">
+  <children>
+    <MenuBar VBox.vgrow="NEVER">
+      <menus>
+        <Menu mnemonicParsing="false" text="File">
+          <items>
+                  <MenuItem id="openFile" mnemonicParsing="false" onAction="#selectAddText" text="add text" />
+            <MenuItem id="openFile" mnemonicParsing="false" onAction="#selectOpenFile" text="Open txt file" />
+            <Menu fx:id="recentMenu" mnemonicParsing="false" text="Open Recent" />
+            <SeparatorMenuItem mnemonicParsing="false" />
+            <MenuItem mnemonicParsing="false" onAction="#selectClose" text="Close" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Edit">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#selectRestart" text="restart" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Help">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#selectAbout" text="about" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+      <BorderPane focusTraversable="true" onKeyTyped="#onKeyTyped"  VBox.vgrow="ALWAYS">
+         <bottom>
+            <Label fx:id="currentSpeed" text="your speed:" BorderPane.alignment="CENTER_LEFT">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font></Label>
+         </bottom>
+         <center>
+            <ScrollPane fx:id="sp" hbarPolicy="NEVER" BorderPane.alignment="CENTER" />
+         </center>
+      </BorderPane>
+  </children>
+</VBox>
