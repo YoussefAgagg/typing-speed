@@ -44,10 +44,10 @@ public class TypeController {
     private InlineCssTextArea area;
     
   
-    private String text="This app to improve your typing speed "
-    		+ "when you typing the color text  will change to grean if your typing is correct "
-    		+ "else the color will be red you don't have to delet any letter just keep typing "
-    		+ "your typing speed will appear in the buttom.";
+    private String text="This application to enhance your typing speed. "
+			+ "when you type the color text will change to green if your typing is correct. "
+			+ "otherwise the color will be red. you don't have to delete any letter just keep typing. "
+			+ "your typing speed will appear in the bottom.";
     private int indexOfText=0;//current index of the string the user type
  
     private char currentChar;
